@@ -39,11 +39,16 @@
 - (IBAction)toggleNotice:(NSButton*)sender;
 {
     if (sender.state==NSOnState) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(volumeChanged:) name:@"LXMasterVolumeChangedNotification" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(volumeChanged:)
+                                                     name:@"LXMasterVolumeChangedNotification"
+                                                   object:nil];
         startMasterVolumeChangeNotification();
     }
     else{
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:@"LXMasterVolumeChangedNotification" object:nil];
+        [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                        name:@"LXMasterVolumeChangedNotification"
+                                                      object:nil];
         stopMasterVolumeChangeNotification();
     }
 }

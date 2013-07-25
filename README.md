@@ -17,8 +17,11 @@ void setMasterVolume(CGFloat volume);//0.0~1.0
 //get master volume
 CGFloat getMasterVolume();//0.0~1.0
 
-//volume change notification name is MasterVolumeChangedNotification
-//[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(volumeChanged:) name:@"LXMasterVolumeChangedNotification" object:nil];
+//volume change notification name is LXMasterVolumeChangedNotification
+//[[NSNotificationCenter defaultCenter] addObserver:self
+//                                         selector:@selector(volumeChanged:)
+//                                             name:@"LXMasterVolumeChangedNotification"
+//                                           object:nil];
 //to get volume change notification
 void startMasterVolumeChangeNotification();
 void stopMasterVolumeChangeNotification();
@@ -44,7 +47,10 @@ setMasterVolume(volume);//range 0.0~1.0
 ```objective-c
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(volumeChanged:) name:@"LXMasterVolumeChangedNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(volumeChanged:)
+                                                 name:@"LXMasterVolumeChangedNotification"
+                                               object:nil];
     [self volumeChanged:nil];
     startMasterVolumeChangeNotification();
 }
@@ -59,8 +65,10 @@ setMasterVolume(volume);//range 0.0~1.0
 ##Stop volume change notification
 
 ```objective-c
-stopMasterVolumeChangeNotification();    
-[[NSNotificationCenter defaultCenter] removeObserver:self name:@"LXMasterVolumeChangedNotification" object:nil];
+stopMasterVolumeChangeNotification();  
+[[NSNotificationCenter defaultCenter] removeObserver:self
+												name:@"LXMasterVolumeChangedNotification"
+											  object:nil];
 ```
 
 
