@@ -11,10 +11,14 @@
 
 @implementation AppDelegate
 
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(volumeChanged:) name:@"LXMasterVolumeChangedNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(volumeChanged:)
+                                                 name:@"LXMasterVolumeChangedNotification"
+                                               object:nil];
     [self volumeChanged:nil];
     startMasterVolumeChangeNotification();
 }

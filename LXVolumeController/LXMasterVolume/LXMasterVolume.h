@@ -16,7 +16,10 @@ void setMasterVolume(CGFloat volume);//0.0~1.0
 CGFloat getMasterVolume();//0.0~1.0
 
 //volume change notification name is LXMasterVolumeChangedNotification
-//[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(volumeChanged:) name:@"LXMasterVolumeChangedNotification" object:nil];
+//[[NSNotificationCenter defaultCenter] addObserver:self
+//                                         selector:@selector(volumeChanged:)
+//                                             name:@"LXMasterVolumeChangedNotification"
+//                                           object:nil];
 //to get volume change notification
 void startMasterVolumeChangeNotification();
 void stopMasterVolumeChangeNotification();
