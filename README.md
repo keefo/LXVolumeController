@@ -51,7 +51,6 @@ setMasterVolume(volume);//range 0.0~1.0
                                              selector:@selector(volumeChanged:)
                                                  name:@"LXMasterVolumeChangedNotification"
                                                object:nil];
-    [self volumeChanged:nil];
     startMasterVolumeChangeNotification();
 }
 
