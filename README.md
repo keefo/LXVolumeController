@@ -3,7 +3,7 @@ LXVolumeController
 
 Under OSX programmatically control the master volume as well as register the volume change notification.
 
-[<img src="http://lianxu.me/wp-content/uploads/2013/07/volumeControl.jpg" alt="Volume Control" width="500" height="150" />][1]
+[<img src="http://lianxu.me/wp-content/uploads/2013/07/volumeControl1.jpg" alt="Volume Control" width="500" height="150" />][1]
 
 ##The API header file
 
@@ -71,5 +71,5 @@ stopMasterVolumeChangeNotification();
 ```
 
 
- [1]: http://lianxu.me/wp-content/uploads/2013/07/volumeControl.jpg
+ [1]: http://lianxu.me/wp-content/uploads/2013/07/volumeControl1.jpg
 
